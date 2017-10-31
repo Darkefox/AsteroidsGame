@@ -31,15 +31,5 @@ class Spaceship extends Floater
     myCenterX=180;
     myCenterY=180;
   }
-  public void keyPressed(KeyEvent e)
-  {
-    if(e.getKeyCode()==40)
-    {
-      bob.setDirectionX(0);
-      bob.setDirectionY(0);
-      bob.setX((int)(Math.random()*500));
-      bob.setY((int)(Math.random()*500));
-      bob.setPointDirection((int)(Math.random()*500));
-    }
-  }
+  
 }
