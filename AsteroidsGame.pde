@@ -3,6 +3,7 @@ Stars[] bunchStars= new Stars[100];
 public void setup() 
 {
   size(500,500);
+  frameRate(60);
   for (int i=0;i< bunchStars.length;i++)
   {
     bunchStars[i] = new Stars();
@@ -31,11 +32,15 @@ public void keyPressed(KeyEvent e)
     }
     if(e.getKeyCode()==65)
     {
-      bob.turn(-10);
+      bob.turn(-20);
     } 
     if(e.getKeyCode()==68)
     {
-      bob.turn(10);
+      bob.turn(20);
+    }
+    if(e.getKeyCode()==83)
+    {
+      bob.accelerate(1);
     }
     
   }
