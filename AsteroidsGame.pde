@@ -1,5 +1,5 @@
 Spaceship bob = new Spaceship();
-Asteroid greg = new Asteroid();
+Asteroid[]bunchAst = new Asteroid[10];
 Stars[] bunchStars= new Stars[100];
 public void setup() 
 {
@@ -9,6 +9,10 @@ public void setup()
   {
     bunchStars[i] = new Stars();
   }
+  for (int i=0;i< bunchAst.length;i++)
+  {
+    bunchAst[i] = new Asteroid();
+  }
 }
 public void draw() 
 {
@@ -17,11 +21,15 @@ public void draw()
   {
     bunchStars[i].show();
   }
+  for (int i=0;i< bunchAst.length;i++)
+  {
+    bunchAst[i].show();
+    bunchAst[i].move();
+  }
   bob.show();
   bob.move();
   
-  greg.show();
-  greg.move();
+  
 }
 public void keyPressed(KeyEvent e)
   {
