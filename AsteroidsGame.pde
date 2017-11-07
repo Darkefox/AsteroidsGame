@@ -1,4 +1,5 @@
 Spaceship bob = new Spaceship();
+Asteroid greg = new Asteroid();
 Stars[] bunchStars= new Stars[100];
 public void setup() 
 {
@@ -19,6 +20,8 @@ public void draw()
   bob.show();
   bob.move();
   
+  greg.show();
+  greg.move();
 }
 public void keyPressed(KeyEvent e)
   {

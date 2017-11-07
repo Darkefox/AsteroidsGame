@@ -1,16 +1,16 @@
 class Stars //note that this class does NOT extend Floater
 {
-  int myX,myY;
-  int sizeX,sizeY;
+  private int myX,myY;
+  private int sizeX,sizeY;
   
-  Stars()
+  public Stars()
   {
     myX=(int)(Math.random()*500);
     myY=(int)(Math.random()*500);
     sizeX=sizeY=5;
   }
   
-  void show()
+  public void show()
   {
     noStroke();
     fill(200);
