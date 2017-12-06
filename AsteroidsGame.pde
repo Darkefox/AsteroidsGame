@@ -1,7 +1,10 @@
 Spaceship bob = new Spaceship();
-//Asteroid[]bunchAst = new Asteroid[10];
+
 ArrayList<Asteroid> bunchAst = new ArrayList<Asteroid>();
+
+ArrayList<Bullet> bunchBul = new ArrayList<Bullet>();
 Stars[] bunchStars= new Stars[100];
+Bullet test = new Bullet(bob);
 public void setup() 
 {
   size(500,500);
@@ -35,8 +38,13 @@ public void draw()
   }
   bob.show();
   bob.move();
-  
-  
+  //loop through the arraylist for bullets and display i
+  for(Bullet test: bunchBul)
+  {
+    test.move();
+    test.show();
+  }
+
 }
 public void keyPressed(KeyEvent e)
   {
@@ -59,6 +67,11 @@ public void keyPressed(KeyEvent e)
     if(e.getKeyCode()==83)
     {
       bob.accelerate(1);
+    }
+    if(e.getKeyCode() == 87)
+    {
+      Bullet newbullet = new Bullet(bob);
+      bunchBul.add(newbullet);
     }
     
   }
