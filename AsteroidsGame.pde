@@ -4,7 +4,7 @@ ArrayList<Asteroid> bunchAst = new ArrayList<Asteroid>();
 
 ArrayList<Bullet> bunchBul = new ArrayList<Bullet>();
 Stars[] bunchStars= new Stars[100];
-Bullet test = new Bullet(bob);
+Asteroid newAst;
 public void setup() 
 {
   size(500,500);
@@ -15,7 +15,7 @@ public void setup()
   }
   for (int i=0;i< 5;i++)
   {
-    Asteroid newAst = new Asteroid();
+    newAst = new Asteroid();
     bunchAst.add(newAst);
   }
   
@@ -35,6 +35,7 @@ public void draw()
     {
       bunchAst.remove(i);
     }
+    
   }
   bob.show();
   bob.move();
@@ -72,6 +73,7 @@ public void keyPressed(KeyEvent e)
     {
       Bullet newbullet = new Bullet(bob);
       bunchBul.add(newbullet);
+      
     }
     
   }

@@ -14,19 +14,19 @@ class Bullet extends Floater
   protected int randTurn;
   protected double randDir;
   
-  double dRadians =myPointDirection*(Math.PI/180);
+  
 
   public Bullet(Spaceship bob)
   {
-    
-    
     myColor=200;
+    myPointDirection=bob.getPointDirection();
+    double dRadians =myPointDirection*(Math.PI/180);
     myDirectionX=5 * Math.cos(dRadians) + bob.getDirectionX();
     myDirectionY=5 * Math.sin(dRadians) + bob.getDirectionY();
     myCenterX=bob.getX();
     myCenterY=bob.getY();
     
-    myPointDirection=bob.getPointDirection();
+    
     
   }
   
